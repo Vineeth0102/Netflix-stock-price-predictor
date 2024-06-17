@@ -4,10 +4,17 @@
   <title>Netflix Stock Price Prediction</title>
   <style>
     body {
-      background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaoMlX4N5agvcUb6s0MNbNGGC0NjtWH6G5Hw&s") no-repeat center center fixed; 
+      background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaoMlX4N5agvcUb6s0MNbNGGC0NjtWH6G5Hw&s') no-repeat center center fixed; 
       background-size: cover; /* Cover the entire background */
       color: #e5e5e5; /* Light text */
       font-family: Open Sans, sans-serif; /* Fallback for sans-serif */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
     }
   
     h1 {
@@ -21,6 +28,16 @@
 
     h1:hover {
       font-size: 2.2em; /* Slightly larger font size on hover */
+    }
+  
+    form {
+      background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      max-width: 400px;
+      width: 100%;
+      box-sizing: border-box;
     }
   
     label {
@@ -37,6 +54,8 @@
       margin-bottom: 1em;
       background-color: #333; /* Darker input background */
       color: #e5e5e5; /* Light text */
+      width: 100%; /* Full width */
+      box-sizing: border-box;
     }
   
     input[type="submit"] {
@@ -56,6 +75,19 @@
 
     #result {
       color: #e50914; /* Netflix red */
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5em;
+      }
+      form {
+        padding: 1em;
+      }
+      input[type="number"],
+      input[type="submit"] {
+        padding: 0.5em;
+      }
     }
   </style>
 </head>
