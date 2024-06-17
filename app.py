@@ -27,5 +27,5 @@ def predict_close(Open, High, Low, Volume):
     temp_df = pd.DataFrame([temp_array], columns=feature_names)
     return NetflixPred.predict(temp_df)[0].round(2)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
