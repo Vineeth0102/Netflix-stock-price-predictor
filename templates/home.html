@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Netflix Stock Price Prediction</title>
+  <style>
+    body {
+      background: url("/images/image.png") no-repeat center center fixed; 
+      background-size: cover; /* Cover the entire background */
+      color: #e5e5e5; /* Light text */
+      font-family: Open Sans, sans-serif; /* Fallback for sans-serif */
+    }
+  
+    h1 {
+      color: #e50914; /* Netflix red */
+      font-family: Montserrat, sans-serif; /* Headings use Montserrat */
+      font-size: 2em;
+      margin-bottom: 1em;
+      text-align: center; /* Center the title */
+      transition: font-size 0.3s ease; /* Smooth transition */
+    }
+
+    h1:hover {
+      font-size: 2.2em; /* Slightly larger font size on hover */
+    }
+  
+    label {
+      color: #e50914; /* Netflix red text */
+      display: block;
+      margin-bottom: 0.5em;
+    }
+  
+    input[type="number"],
+    input[type="submit"] {
+      padding: 0.8em 1em;
+      border: 1px solid #333; /* Darker border */
+      border-radius: 4px;
+      margin-bottom: 1em;
+      background-color: #333; /* Darker input background */
+      color: #e5e5e5; /* Light text */
+    }
+  
+    input[type="submit"] {
+      background-color: #e50914; /* Netflix red */
+      color: #fff; /* White text */
+      cursor: pointer;
+    }
+  
+    input[type="submit"]:hover {
+      background-color: #b20710; /* Darker red on hover */
+    }
+  
+    p {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    #result {
+      color: #e50914; /* Netflix red */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Netflix Stock Price Prediction</h1>
+  
+  <form action="/predict" method="POST">
+
+    <label for="Opening_value">Open Price:</label>
+    <input type="number" id="Opening_value" name="Opening_value" step="any" required><br>
+
+    <label for="Low_value">Lowest Price:</label>
+    <input type="number" id="Low_value" name="Low_value" step="any" required><br>
+
+    <label for="Highest_value">Highest Price:</label>
+    <input type="number" id="Highest_value" name="Highest_value" step="any" required><br>
+
+    <label for="Volume">Volume:</label>
+    <input type="number" id="Volume" name="Volume" step="any" required><br>
+
+    <input type="submit" value="Predict"><br><br><br>
+
+    <p>Closing Price: <span id="result">{{result}}</span></p>
+
+  </form>
+</body>
+</html>
